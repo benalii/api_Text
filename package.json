@@ -1,0 +1,11 @@
+{
+  "name": "api_Text",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/benalii/api_Text.git",
+  "author": "ahlam <ahlambenali2017@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "expressjs": "^1.0.1"
+  }
+}
