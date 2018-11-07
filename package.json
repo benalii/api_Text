@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
-    "expressjs": "^1.0.1"
+    "expressjs": "^1.0.1",
+    "justified": "^1.0.1",
+    "lodash": "^4.17.11"
   }
 }
