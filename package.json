@@ -5,10 +5,11 @@
   "repository": "https://github.com/benalii/api_Text.git",
   "author": "ahlam <ahlambenali2017@gmail.com>",
   "license": "MIT",
-  "scripts":{
+  "scripts": {
     "start": "node ."
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "expressjs": "^1.0.1"
   }
 }
