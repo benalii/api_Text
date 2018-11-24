@@ -1,14 +1,26 @@
 const express = require('express')
-
+const gql = require("graphql-tag")
 const bodyParser = require('body-parser')
 
 const justify = require('justified');
-const { isString, get } = require('lodash/fp')
+const { isString, get, isNil } = require('lodash/fp')
+
+const client = require("./connectors/apollo")
 
 const app = express()
 const port = 3000
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
+
+app.post("/graph",async function(req, res) {
+  const result = await client.query({query: gql`query user {
+  allUsers {
+    id
+  }
+}
+`})
+  res.send(result)
+})
 
 app.post('/', function (req, res) {
   const text = get( "body.text", req)
@@ -24,5 +36,6 @@ app.post('/', function (req, res) {
    })
   }
 })
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
